@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baper Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-6">Welcome To Your <span class="font-semibold text-violet-600">Baper Bank !!!</span></h1>
+    </header>
+
+
+    <main>
+        <section class="bg-blue-200 w-9/12 mx-auto mt-12 p-8">
+            <h3 class="mb-4 text-3xl font-medium">Please Login</h3>
+            <div >
+                <input id="email-field" class="w-9/12 block mb-2 px-3" type="email" placeholder="your email" name="" id="">
+                <input id="user-password" class="w-9/12 block mb-2 px-3" type="password" placeholder="your password" name="" id="">
+            <button id="btn-submit" class="bg-amber-400 hover:bg-sky-700 text-white px-8 py-2 font-medium rounded-lg">Submit</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('btn-submit').addEventListener('click', function(){
+            const emailField = document.getElementById('email-field');
+            const email = emailField.value;
+            //console.log(email)
+
+
+            const passwordField = document.getElementById('user-password');
+            const password = passwordField.value;
+            //console.log(password)
+
+
+            //Do not check do this way its for new to understand
+            
+            if(email === 'goribulla@gmail.com' && password === '123456'){
+                // console.log('valid user')
+                window.location.href = 'bank2.html'
+            }
+            else{
+                alert('tui password vule gecoc')
+                // ba alert use kora jabe
+            }
+            // for get html page link use it on console
+            // window.location.href = 'bank2.html'
+            
+        })
+    </script>
+</body>
+</html>
